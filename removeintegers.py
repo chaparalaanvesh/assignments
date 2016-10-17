@@ -6,3 +6,4 @@ for i in input:
         output.append(i)
 output=''.join(output)
 print output
+print i
