@@ -1,4 +1,4 @@
-import sys
+
 l = [10,5,4,3,1]
 i = 0
 for i in range(len(l)-1):
