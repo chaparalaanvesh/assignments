@@ -15,11 +15,12 @@ def lettercount(a):
      for i in range(ord('a'),ord('z')):
         print chr(i),a.count(chr(i))
 
+def main():
+    a = 'a to the four where supers i be the other four'
+    length(a)
+    print 'words'
+    wordcount(a)
+    print 'letters'
+    lettercount(a)
 
-a = 'a to the four where supers i be the other four'
-length(a)
-print 'words'
-wordcount(a)
-print 'letters'
-lettercount(a)
-
+main()
