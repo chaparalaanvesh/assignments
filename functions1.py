@@ -11,9 +11,9 @@ def wordcount(a):
             list1.append(i)
             print i,list.count(i)
 
-def lettercount(a):
-     for i in range(ord('a'),ord('z')):
-        print chr(i),a.count(chr(i))
+def lettercount(a):                                                               #def lettercount(a):
+     for i in range(ord('a'),ord('z')):                                           #     for i in 'abcdefghijklmnopqrstuvwxyz':
+        print chr(i),a.count(chr(i))                                              #         print i,a.count(i)
 
 def main():
     a = 'a to the four where supers i be the other four'
