@@ -6,8 +6,7 @@ print '1: Create Account'
 print '2: Balance Enquiry'
 print '3: Cash Withdrawl'
 print '4: Deposits'
-print '5: All Account Holders'
-print '6: Delete Account'
+print '5: Delete Account'
 choice = input("enter your choice(1/2/3/4/5): ")
 
 if choice == 1:

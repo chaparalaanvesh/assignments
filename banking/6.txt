@@ -1,1 +1,0 @@
-{'name': 'nik', 'address1': '356', 'address2': '3156', 'phone': 156854, 'account_number': 6, 'balance': 22}

@@ -1,0 +1,1 @@
+{'city': '01885', 'name': 'raghu', 'phone': 2365412, 'street': '12224', 'account_number': 84, 'balance': 200}
