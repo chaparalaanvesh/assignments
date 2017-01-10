@@ -14,5 +14,11 @@ Sample Output:
 
 
 
-from __future__ import print_function
-print(*range(1, input() + 1), sep="")
+#from __future__ import print_function
+#print(*range(1, input() + 1), sep="")
+
+
+for i in range(10):
+    a = i,
+    print a
+
