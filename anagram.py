@@ -1,17 +1,9 @@
-def anagram(a1,a2):
-    l1 = list(a1)
-    l2 = list(a2)
-
-    l1.sort()
-    l2.sort()
-
-    position = 0
-    found = True
-    while position < len(l1) and found:
-        if l1[position] == l2[position]:
-            position = position + 1
-        else:
-            found = False
-    return found
+def anagram(a1, a2):
+    if len(a1) != len(a2):
+        return False
+    for letter in a1:
+        if letter not in a2:
+            return False
+    return True
 
 print anagram('python','typhon')

@@ -23,3 +23,6 @@ if s>9:
         s1 = sum(numlist1)
     print s1
 
+
+# write in function
+#input give in function only
