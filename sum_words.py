@@ -6,7 +6,6 @@ def sum_words(f):
     file = open('C:\Python27\len_of_words.txt')
     words = re.findall('\w+', file.read())
     output = sum([len(word) for word in words]) / len(words)
-    return output
     file.close()
-
+    return output
 print sum_words(f='C:\Python27\len_of_words.txt')
