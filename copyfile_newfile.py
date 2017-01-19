@@ -9,4 +9,5 @@ def copyfile_newfile(f):
     old_file.close()
     new_file.close()
 
+print "file copied successfully - check the path for result"
 copyfile_newfile(f='C:\Python27\ newfile.txt')
