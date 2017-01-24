@@ -16,7 +16,7 @@ input = lambda word:len(word)
 print map(input,['hello','anvesh','rakesh','nikhil'])
 
 
-#list comprehensions
+#using list comprehensions
 
 input = [len(a) for a in ['hello','anvesh','rakesh','nikhil'] ]
 for i in input:
