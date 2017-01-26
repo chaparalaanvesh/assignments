@@ -1,21 +1,13 @@
+#converting all the 0's to 5 in the given integer
+
+
+
 def convertFive(n):
-    k=0
-    while(n!=0):
-        result=n%10
-        if(result!=0):
-            k=k*10+result
-        else:
-            k=k*10+5
-        n=n/10
-
-    while(k!=0):
-        r=k%10
-        n=n*10+r
-        k=k/10
-
-    return n
-
-
+    list1 = map(int,str(n))
+    temp = [5 if x==0 else x for x in list1]
+    a = map(str, temp)
+    result=''.join(a)
+    return result
 
 print convertFive(100)
-
+print convertFive(121)
