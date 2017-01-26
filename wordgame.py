@@ -7,7 +7,7 @@ def get_random_word():
 
 def show_word(word):
     for character in word:
-        print character," ", end=""
+        print character
         print ""
 
 def get_guess():
