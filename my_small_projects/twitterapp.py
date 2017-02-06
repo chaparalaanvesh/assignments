@@ -38,6 +38,6 @@ class twitterthon:
 
 
 t = twitterthon()
-#t.followers()
-#t.searching_tweet()
+t.followers()
+t.searching_tweet()
 t.gettingsimilarUser()
