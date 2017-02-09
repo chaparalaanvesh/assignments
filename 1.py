@@ -7,3 +7,5 @@ for i in range(len(list1)):
     list1.remove(temp)
 
 print list2
+
+
