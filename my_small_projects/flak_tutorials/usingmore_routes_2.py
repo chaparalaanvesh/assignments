@@ -1,4 +1,4 @@
-from flask import Flask:
+from flask import Flask
 
 app = Flask(__name__)
 
@@ -19,5 +19,5 @@ def profile_id(id):
     return 'hey there %d' % id
 
 
-if __name__ == '__main__'
+if __name__ == '__main__':
     app.run(debug=True)
