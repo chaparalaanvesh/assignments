@@ -1,8 +1,9 @@
 from twython import Twython
+from flask import Flask
 import configparser
 import logging
 
-                                                                                        #config lib , logging to log all the operations , try except blocks
+app = Flask(__name__)                               #config lib , logging to log all the operations , try except blocks
 
 
 class twitterthon:
@@ -17,6 +18,7 @@ class twitterthon:
         self.twitter = Twython(APP_KEY,APP_SECRET,access_token = ACCESS_TOKEN)
 
     def followers(self,screen_name):
+        #This function returns the followers present for the given name
        followers = []
 
        try:
@@ -40,6 +42,7 @@ class twitterthon:
         return tweets
 
     def search_tweets(self, screen_name, search_text):
+        #This function searches the tweets by given string
         search_tweet_result = []
         try:
             result = self.twitter.get_user_timeline(screen_name=screen_name)
@@ -51,21 +54,20 @@ class twitterthon:
         return search_tweet_result
 
     def gettingsimilarUser(self,user1,user2):
+        #Helps to find the similar users by comparing them
         similar_users = []
         try:
             user_1 = self.twitter.get_followers_ids(screen_name=user1)
             user_2 = self.twitter.get_followers_ids(screen_name=user2)
             user1_followers = [i['screen_name'] for i in user_1['users']]
             user2_followers = [i['screen_name'] for i in user_2['users']]
-            for i in user1_followers:
-                for j in user2_followers:
-                    data1 = self.twitter.show_user(user=i)
-                    data2 = self.twitter.show_user(user=j)
-                if data1 in data2:
-                    print(data1["screen_name"])
+            for follower in user1_followers:
+                if follower in user2_followers:
+                    similar_users.append(follower)
+
 
         except Exception, e:
-            logging.error('erroe in getting similar users',str(e))
+            logging.error('error in getting similar users',str(e))
 
         return similar_users
 
