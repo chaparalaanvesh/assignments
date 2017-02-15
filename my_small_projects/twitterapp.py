@@ -1,11 +1,13 @@
 from twython import Twython
 from flask import Flask,render_template,request
+import datetime
 import configparser
 import logging
 
 app = Flask(__name__)                               #config lib , logging to log all the operations , try except blocks
 
-logging.basicConfig(filename='config_test.log',level=logging.DEBUG)
+file_name = str(datetime.date.today()) + '.log'             #creates a .log file with current date as it's name
+logging.basicConfig(filename=file_name,level=logging.DEBUG)
 
 
 config = configparser.ConfigParser()
@@ -26,7 +28,7 @@ def func1():
     return render_template('followers_list.html')
 
 
-
+@app.route('/',methods = ['get'])
 def followers(self,screen_name):    #This function returns the followers present for the given name
     followers = []
 
